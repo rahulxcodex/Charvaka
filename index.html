@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -60,12 +61,15 @@
                     <a href="#about" class="text-gray-600 hover:charvaka-text-accent font-medium transition-colors duration-300">About Us</a>
                     <a href="#portfolio" class="text-gray-600 hover:charvaka-text-accent font-medium transition-colors duration-300">Portfolio</a>
                     <a href="#impact" class="text-gray-600 hover:charvaka-text-accent font-medium transition-colors duration-300">Our Impact</a>
+                    <a href="#sdg11" class="text-gray-600 hover:charvaka-text-accent font-medium transition-colors duration-300">SDG 11 Explained</a>
                     <a href="#casestudies" class="text-gray-600 hover:charvaka-text-accent font-medium transition-colors duration-300">Case Studies</a>
-                    <a href="#contact" class="text-gray-600 hover:charvaka-text-accent font-medium transition-colors duration-300">Contact</a>
                 </nav>
-                <a href="#contact" class="hidden md:inline-block charvaka-bg-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors duration-300">
-                    Careers
-                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                     <a href="#contact" class="text-gray-600 hover:charvaka-text-accent font-medium transition-colors duration-300">Contact</a>
+                    <a href="#careers" class="charvaka-bg-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors duration-300">
+                        Careers
+                    </a>
+                </div>
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden text-gray-700">
                     <i data-feather="menu" class="w-6 h-6"></i>
@@ -76,9 +80,10 @@
                 <a href="#about" class="block py-2 text-gray-600 hover:charvaka-text-accent">About Us</a>
                 <a href="#portfolio" class="block py-2 text-gray-600 hover:charvaka-text-accent">Portfolio</a>
                 <a href="#impact" class="block py-2 text-gray-600 hover:charvaka-text-accent">Our Impact</a>
+                <a href="#sdg11" class="block py-2 text-gray-600 hover:charvaka-text-accent">SDG 11 Explained</a>
                 <a href="#casestudies" class="block py-2 text-gray-600 hover:charvaka-text-accent">Case Studies</a>
                 <a href="#contact" class="block py-2 text-gray-600 hover:charvaka-text-accent">Contact</a>
-                 <a href="#contact" class="block mt-4 text-center charvaka-bg-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors duration-300">
+                 <a href="#careers" class="block mt-4 text-center charvaka-bg-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors duration-300">
                     Careers
                 </a>
             </div>
@@ -120,7 +125,7 @@
                         </p>
                     </div>
                     <div>
-                        <img src="https://placehold.co/600x400/16a34a/FFFFFF?text=Sustainable+Architecture" alt="Modern sustainable building" class="rounded-xl shadow-lg w-full h-auto">
+                        <img src="https://i.postimg.cc/qR3dnyTt/vecteezy-nature-friendly-home-renewable-energy-using-solar-and-wind-8135732.jpg" alt="Modern sustainable building" class="rounded-xl shadow-lg w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/16a34a/FFFFFF?text=Sustainable+Architecture';">
                     </div>
                 </div>
                 
@@ -158,7 +163,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden custom-shadow custom-shadow-hover transition-all duration-300">
-                        <img src="https://placehold.co/600x400/22c55e/FFFFFF?text=Eco+Pods" alt="Neom-Inspired Eco Pods" class="w-full h-56 object-cover">
+                        <img src="https://i.postimg.cc/Gp7KbD0f/ecopods.jpg" alt="Neom-Inspired Eco Pods" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/22c55e/FFFFFF?text=Eco+Pods';">
                         <div class="p-6">
                             <p class="text-sm text-gray-500">Housing & Residential</p>
                             <h3 class="font-bold text-xl my-2">Neom-Inspired Eco Pods</h3>
@@ -167,7 +172,7 @@
                     </div>
                     <!-- Project 2 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden custom-shadow custom-shadow-hover transition-all duration-300">
-                        <img src="https://placehold.co/600x400/84cc16/FFFFFF?text=City+Park" alt="City Center Park Redevelopment" class="w-full h-56 object-cover">
+                        <img src="https://i.postimg.cc/PrJtxs8F/city-park.jpg" alt="City Center Park Redevelopment" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/84cc16/FFFFFF?text=City+Park';">
                         <div class="p-6">
                             <p class="text-sm text-gray-500">Urban Planning</p>
                             <h3 class="font-bold text-xl my-2">City Center Park Redevelopment</h3>
@@ -176,13 +181,18 @@
                     </div>
                     <!-- Project 3 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden custom-shadow custom-shadow-hover transition-all duration-300">
-                        <img src="https://placehold.co/600x400/10b981/FFFFFF?text=Transport+Hub" alt="Eco-Transport Hub" class="w-full h-56 object-cover">
+                        <img src="https://i.postimg.cc/HLpvYHrr/transport-hubs.jpg" alt="Eco-Transport Hub" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/FFFFFF?text=Transport+Hub';">
                         <div class="p-6">
                             <p class="text-sm text-gray-500">Infrastructure</p>
                             <h3 class="font-bold text-xl my-2">The Meridian Eco-Transport Hub</h3>
                             <p class="text-gray-600 text-sm">A multi-modal transit center designed to integrate electric buses, bike sharing, and pedestrian walkways seamlessly.</p>
                         </div>
                     </div>
+                </div>
+                 <div class="text-center mt-16">
+                    <a href="#" class="charvaka-bg-accent text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-green-700 transition-transform duration-300 inline-block transform hover:scale-105">
+                        View Past Projects
+                    </a>
                 </div>
             </div>
         </section>
@@ -195,50 +205,102 @@
                     <h2 class="text-3xl md:text-4xl font-bold charvaka-text mt-2">Measurable Impact on People & Planet</h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">We are committed to creating a positive legacy through our work. Our goals are ambitious, and our achievements are a testament to our dedication.</p>
                 </div>
-                <!-- Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
-                    <div>
-                        <h3 class="text-4xl font-extrabold charvaka-text-accent">30%</h3>
-                        <p class="font-semibold mt-2">Average Reduction in Project Carbon Footprint</p>
+                <!-- Stats & Graphs -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <!-- Graphs -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold charvaka-text mb-4 text-center">Project Focus Areas</h3>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-center font-semibold text-gray-700 mb-2">Carbon Reduction</h4>
+                                <canvas id="carbonReductionChart"></canvas>
+                            </div>
+                            <div>
+                                 <h4 class="text-center font-semibold text-gray-700 mb-2">Project Alignment</h4>
+                                <canvas id="projectAlignmentChart"></canvas>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="text-4xl font-extrabold charvaka-text-accent">5,000+</h3>
-                        <p class="font-semibold mt-2">Affordable & Sustainable Housing Units Designed</p>
-                    </div>
-                    <div>
-                        <h3 class="text-4xl font-extrabold charvaka-text-accent">1M sq ft</h3>
-                        <p class="font-semibold mt-2">of Green Public Space Created & Revitalized</p>
-                    </div>
-                    <div>
-                        <h3 class="text-4xl font-extrabold charvaka-text-accent">15+</h3>
-                        <p class="font-semibold mt-2">Communities Transformed Through Inclusive Design</p>
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 gap-8 text-center">
+                        <div>
+                            <h3 class="text-4xl font-extrabold charvaka-text-accent">30%</h3>
+                            <p class="font-semibold mt-2">Average Reduction in Project Carbon Footprint</p>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-extrabold charvaka-text-accent">5,000+</h3>
+                            <p class="font-semibold mt-2">Affordable & Sustainable Housing Units Designed</p>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-extrabold charvaka-text-accent">1M sq ft</h3>
+                            <p class="font-semibold mt-2">of Green Public Space Created & Revitalized</p>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-extrabold charvaka-text-accent">15+</h3>
+                            <p class="font-semibold mt-2">Communities Transformed Through Inclusive Design</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Commitments -->
-                <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 grid md:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-2xl font-bold charvaka-text mb-4">Our Environmental Commitment</h3>
-                        <p class="text-gray-600 leading-relaxed">We actively work to minimize environmental impact by prioritizing sustainable materials, reducing waste, and integrating renewable energy systems. Our designs enhance local biodiversity and promote a harmonious relationship between the built and natural environment, directly contributing to SDG 11's targets for air quality and green spaces.</p>
+            </div>
+        </section>
+
+        <!-- SDG 11 Explained Section -->
+        <section id="sdg11" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <span class="charvaka-text-accent font-semibold">Our Guiding Principle</span>
+                    <h2 class="text-3xl md:text-4xl font-bold charvaka-text mt-2">Understanding SDG 11: Sustainable Cities</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+                        Sustainable Development Goal 11 is the United Nations' blueprint for making cities and human settlements inclusive, safe, resilient, and sustainable. As architects and urban planners, this goal is at the very core of our purpose. It guides our design philosophy and pushes us to create spaces that serve both people and the planet.
+                    </p>
+                </div>
+                <h3 class="text-2xl font-bold text-center charvaka-text mb-12">Our Key SDG 11 Targets</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Target 11.1 -->
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-2">11.1: Safe & Affordable Housing</h4>
+                        <p class="text-gray-600 text-sm">We design innovative, low-cost housing using sustainable materials and construction techniques to ensure everyone has access to a safe and dignified home.</p>
                     </div>
-                     <div>
-                        <h3 class="text-2xl font-bold charvaka-text mb-4">Our Social Commitment</h3>
-                        <p class="text-gray-600 leading-relaxed">Architecture is for people. We focus on creating safe, accessible, and inclusive public spaces that foster community and improve quality of life. Through participatory design processes, we ensure that the voices of the community are heard, leading to spaces that are not only beautiful but also deeply connected to their users.</p>
+                    <!-- Target 11.2 -->
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-2">11.2: Accessible Transport</h4>
+                        <p class="text-gray-600 text-sm">Our master plans prioritize people over cars, creating walkable neighborhoods with integrated public transit and safe cycling infrastructure.</p>
+                    </div>
+                    <!-- Target 11.3 -->
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-2">11.3: Inclusive Urbanization</h4>
+                        <p class="text-gray-600 text-sm">We champion participatory planning processes, ensuring that communities have a voice in shaping their environment for balanced, sustainable growth.</p>
+                    </div>
+                    <!-- Target 11.4 -->
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-2">11.4: Protect Cultural Heritage</h4>
+                        <p class="text-gray-600 text-sm">Through adaptive reuse and sensitive design, we protect and celebrate the world's cultural and natural heritage within our projects.</p>
+                    </div>
+                    <!-- Target 11.5 -->
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-2">11.5: Disaster Resilience</h4>
+                        <p class="text-gray-600 text-sm">We design buildings and infrastructure to be resilient against the impacts of climate change and natural disasters, protecting lives and investments.</p>
+                    </div>
+                    <!-- Target 11.7 -->
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-2">11.7: Green Public Spaces</h4>
+                        <p class="text-gray-600 text-sm">We are passionate about creating accessible and inclusive green spaces, like parks and public squares, that promote well-being and biodiversity.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Case Studies Section -->
-        <section id="casestudies" class="py-20 bg-white">
+        <section id="casestudies" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <span class="charvaka-text-accent font-semibold">In-Depth Look</span>
                     <h2 class="text-3xl md:text-4xl font-bold charvaka-text mt-2">Case Studies</h2>
                 </div>
                 <!-- Case Study 1 -->
-                <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden md:flex items-center mb-12">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden md:flex items-center mb-12">
                     <div class="md:w-1/2">
-                         <img src="https://placehold.co/800x600/16a34a/FFFFFF?text=Green+Residences" alt="Green Residences Project" class="w-full h-full object-cover">
+                         <img src="https://i.postimg.cc/Hn4BDhTw/pexels-casnafu-32296132.jpg" alt="Green Residences Project" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/16a34a/FFFFFF?text=Green+Residences';">
                     </div>
                     <div class="p-8 md:p-12 md:w-1/2">
                         <h3 class="font-bold text-2xl charvaka-text mb-3">The Solaris Green Residences</h3>
@@ -249,7 +311,7 @@
                  <!-- Case Study 2 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden md:flex flex-row-reverse items-center">
                     <div class="md:w-1/2">
-                         <img src="https://placehold.co/800x600/22c55e/FFFFFF?text=Cultural+Center" alt="Cultural Center Project" class="w-full h-full object-cover">
+                         <img src="https://i.postimg.cc/SKS4wBqr/cultural-centre.jpg" alt="Cultural Center Project" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/22c55e/FFFFFF?text=Cultural+Center';">
                     </div>
                     <div class="p-8 md:p-12 md:w-1/2">
                         <h3 class="font-bold text-2xl charvaka-text mb-3">Aethelgard Cultural Center</h3>
@@ -260,34 +322,40 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 lg:flex lg:items-center lg:justify-between">
-                    <div class="lg:w-1/2">
-                        <h2 class="text-3xl font-bold charvaka-text">Let's Build a Sustainable Future Together</h2>
-                        <p class="text-gray-600 mt-3">Have a project in mind, want to partner with us, or interested in a career at Charvaka? We'd love to hear from you.</p>
-                    </div>
-                    <div class="mt-8 lg:mt-0 lg:w-1/2 lg:pl-12">
-                        <form action="#" method="POST">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="name" class="sr-only">Name</label>
-                                    <input type="text" name="name" id="name" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Your Name">
+        <!-- Careers & Contact Section -->
+        <section id="careers" class="py-20 bg-white">
+             <div class="container mx-auto px-6">
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="charvaka-text-accent font-semibold">Join Our Team</span>
+                            <h2 class="text-3xl font-bold charvaka-text mt-2">Shape the Future with Us</h2>
+                            <p class="text-gray-600 mt-4 mb-6">We are always looking for passionate architects, designers, and planners who share our vision. If you are driven by purpose and want to make a tangible impact, explore our open positions.</p>
+                            <a href="#" class="charvaka-bg-accent text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300">View Open Positions</a>
+                        </div>
+                        <div id="contact">
+                            <h3 class="text-2xl font-bold charvaka-text">Get in Touch</h3>
+                            <p class="text-gray-600 mt-3 mb-6">Have a project in mind or want to partner with us? We'd love to hear from you.</p>
+                             <form action="#" method="POST">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="name" class="sr-only">Name</label>
+                                        <input type="text" name="name" id="name" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Your Name">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="sr-only">Email</label>
+                                        <input type="email" name="email" id="email" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Your Email">
+                                    </div>
                                 </div>
-                                <div>
-                                    <label for="email" class="sr-only">Email</label>
-                                    <input type="email" name="email" id="email" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Your Email">
+                                <div class="mt-4">
+                                    <label for="message" class="sr-only">Message</label>
+                                    <textarea name="message" id="message" rows="4" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Your Message"></textarea>
                                 </div>
-                            </div>
-                            <div class="mt-4">
-                                <label for="message" class="sr-only">Message</label>
-                                <textarea name="message" id="message" rows="4" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="Your Message"></textarea>
-                            </div>
-                            <div class="mt-4">
-                                <button type="submit" class="w-full charvaka-bg-accent text-white font-bold p-3 rounded-md hover:bg-green-700 transition-colors duration-300">Send Message</button>
-                            </div>
-                        </form>
+                                <div class="mt-4">
+                                    <button type="submit" class="w-full charvaka-bg-accent text-white font-bold p-3 rounded-md hover:bg-green-700 transition-colors duration-300">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,7 +379,7 @@
                         <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
                         <li><a href="#impact" class="text-gray-400 hover:text-white transition">Our Impact</a></li>
                         <li><a href="#casestudies" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#careers" class="text-gray-400 hover:text-white transition">Careers</a></li>
                     </ul>
                 </div>
                 <!-- Contact Info -->
@@ -365,6 +433,84 @@
             } else {
                 header.classList.remove('header-scrolled');
             }
+        });
+
+        // Chart.js Graphs
+        document.addEventListener('DOMContentLoaded', () => {
+            // Carbon Reduction Bar Chart
+            const ctxBar = document.getElementById('carbonReductionChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['Residential', 'Commercial', 'Public Space', 'Infrastructure'],
+                    datasets: [{
+                        label: '% Reduction',
+                        data: [35, 25, 40, 28],
+                        backgroundColor: 'rgba(22, 163, 74, 0.6)',
+                        borderColor: 'rgba(22, 163, 74, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Project Alignment Bar Chart
+            const ctxAlign = document.getElementById('projectAlignmentChart').getContext('2d');
+            new Chart(ctxAlign, {
+                type: 'bar',
+                data: {
+                    labels: ['2023', '2024', '2025'],
+                    datasets: [{
+                        label: 'Total Projects',
+                        data: [45, 52, 60],
+                        backgroundColor: '#d1fae5',
+                        borderColor: '#a7f3d0',
+                        borderWidth: 1
+                    }, {
+                        label: 'SDG 11 Aligned',
+                        data: [35, 45, 55],
+                        backgroundColor: '#16a34a',
+                        borderColor: '#15803d',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                             labels: {
+                                boxWidth: 12
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        },
+                        x: {
+                            stacked: false
+                        }
+                    }
+                }
+            });
         });
     </script>
 </body>
